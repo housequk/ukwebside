@@ -1,0 +1,533 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  min-height: 100%;
+  max-width: 100%;
+  overflow-x: hidden
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* .card {
+  margin-bottom: 20px;
+  background-color: rgba(255, 255, 255, 1);
+} */
+
+.button {
+  background-color: black;
+}
+.hotOffer{
+  position: absolute;
+  top: 45vh;
+  height: 4vh;
+  width: 20vw;
+  left: 10vw;
+}
+.btnHotOgger
+{
+  background-color: rgba(0, 0, 0,.5);
+  border-radius: 5px;
+}
+
+#detail {
+  min-height: 80vh;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.SideNavMaszyna {
+  min-width: 70vw;
+  background-color: rgba(255, 255, 255, 0);
+}
+.btnwyszukiwarka {
+  min-height: 15vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+  border-radius: 50px;
+  min-width: 40vw;
+}
+.CardSideNav {
+  min-height: 80vw;
+
+  background-color: white;
+}
+.kliencicard {
+  min-height: 30vh;
+  border-radius: 50px;
+  margin-top: 10px;
+}
+.navbarmadejpak {
+  background-color: rgba(255, 255, 255, 0);
+  min-height: 85px;
+  position: fixed;
+  z-index: 3;
+}
+
+
+.przycisk_nawigacja {
+  background-color: rgba(255, 255, 255, 0.35);
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  font-size: large;
+  border-radius: 20px;
+  height: 55px;
+}
+.imgwyszukiwarka {
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 60px;
+  border: none;
+}
+.imgwyszukiwarkabtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  width: 100%;
+  height: 12vh;
+}
+.klienci {
+  border-radius: 20px;
+}
+
+.przycisk_nawigacja_pl {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Flag_of_Poland.svg/240px-Flag_of_Poland.svg.png");
+  background-size: 250%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: large;
+  background-color: rgb(19, 77, 43, 0);
+  border-radius: 20px;
+  width: 50px;
+}
+.przycisk_nawigacja_rodo {
+  background-color: rgba(255, 255, 255, 0.35);
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  margin-left: 5px;
+  font-size: large;
+  border-radius: 20px;
+  width: 90px;
+  color: black;
+}
+.przycisk_nawigacja_en {
+  background-image: url("data:image/png;base64,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");
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: large;
+  background-color: rgb(21, 255, 0, 0);
+  border-radius: 20px;
+  width: 50px;
+}
+
+.kartyproduktow {
+  min-height: 30vh;
+  min-height: 45vh;
+  margin-top: 10px;
+}
+.btnmenu {
+  height: 95px !important;
+  width: 80px !important;
+  background-color: rgb(255, 255, 255);
+  margin-top: 0px !important;
+  margin-left: -20px !important;
+  border-radius: 0px !important;
+  font-size: large !important;
+}
+
+.imgbg {
+  height: 100vh !important;
+  width: 100vw !important;
+  position: absolute;
+  z-index: 0;
+  top: 100px;
+  right: 3vw !important;
+}
+
+.optionCard {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 20vh !important;
+  border-radius: 8vh !important;
+}
+
+.optionImg {
+  margin-top: -13vh !important;
+}
+
+.homeSlider {
+  height: 80vh !important;
+}
+.homeTabs {
+  height: 80vh !important;
+}
+
+.obrazkiKonfigurator {
+  height: 100% !important;
+  width: 100vw !important;
+  position: absolute;
+  top: 0vh;
+  z-index: -2;
+  left: -1vw !important;
+}
+
+.footer {
+  margin-top: 17vh;
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.orderButton {
+  background-color: rgb(30, 155, 46, 0, 0);
+  width: 40vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 10vh !important;
+  border-radius: 8vh !important;
+  margin-top: 6vh;
+}
+
+.contactForm {
+  min-height: 120vh !important;
+}
+.homepageCointainer {
+  position: absolute;
+  top: -10vh !important;
+}
+.homeimg {
+  /* width: 105vw !important; */
+
+  top: -0vh !important;
+  z-index: -2 !important;
+  left: -1vw !important;
+  min-height: 100vh;
+}
+
+.marginTop {
+  margin-top: -5vh;
+}
+
+.cardhomeo1 {
+  position: absolute !important;
+  border-radius: 10px;
+  top: 25vh !important;
+  z-index: 2 !important;
+  right: 2vw !important;
+  max-width: 20vw;
+  background-color: rgba(255, 94, 0, 0.829);
+}
+.cardhomeo1picture {
+  max-width: 15vw;
+  background-color: rgb(21, 255, 0, 0);
+}
+
+.player-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.react-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* .player-wrapper {
+  width: auto;
+  height: auto;
+}
+.react-player {
+  padding-top: 56.25%;
+  position: relative; 
+}
+
+.react-player > div {
+  position: absolute; 
+} */
+
+.homeheader {
+  position: absolute;
+  top: 28vh !important;
+  left: 0 !important;
+  z-index: 2 !important;
+  max-width: 60vw !important;
+}
+.orangeaplfa1 {
+  background-color: rgba(255, 94, 0, 0.829);
+  position: absolute;
+  top: 50vh !important;
+  left: 0 !important;
+  z-index: 2 !important;
+  max-width: 60vw !important;
+  min-width: 50vw !important;
+  border-radius: 20px;
+}
+
+.homepage2div {
+  position: absolute;
+  top: 15vh !important;
+  left: 0 !important;
+  z-index: 2 !important;
+  max-width: 45vw !important;
+}
+.orangealpfa2 {
+  background-color: rgba(255, 94, 0, 0.8);
+  position: fixed;
+ 
+  max-height: 40vh;
+  font-size: 2vh;
+  border-radius: 10px !important;
+  z-index: 3 !important;
+}
+.orangealpfa3 {
+  background-color: rgb(58, 58, 58);
+  position: absolute;
+  margin-top: 50vh;
+
+  font-size: 2vh;
+  border-radius: 10px !important;
+  z-index: 2 !important;
+}
+.orangealpfa2-1 {
+  background-color: rgba(255, 94, 0);
+  margin-top: -20vh;
+  border-radius: 10px !important;
+  z-index: 2 !important;
+}
+.galeria {
+  min-width: 80vw  !important;
+  min-height: 100%;
+  
+  margin-top: 9vh !important;
+}
+
+.cd-resize-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  overflow: hidden;
+  /* Force Hardware Acceleration in WebKit */
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+.is-visible .cd-resize-img {
+  width: 50%;
+  /* bounce in animation of the modified image */
+  animation: cd-bounce-in 0.7s;
+}
+@keyframes cd-bounce-in {
+  0% {
+    width: 0;
+  }
+  60% {
+    width: 55%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+
+.tabs{
+  height: 5vw;
+  min-height: 50px;
+}
+.tabs .tab a {
+  color: rgb(158, 158, 158);
+  font-size: 3vw;
+  
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  /* background-color: rgb(196, 89, 28); */
+  color: rgb(255, 81, 0);
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  background-color: white;
+  color: rgb(255, 102, 0);
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color: rgb(190, 60, 0);
+} /*Color of underline*/
+
+.tab-zamow {
+  top: 15vh !important;
+  min-height: 100vh !important;
+}
+
+.blackalfa {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.galeriacarusela {
+  height: 80vh;
+}
+
+.carousel {
+  height: 90vh;
+  margin-top: -5vh;
+}
+.carousel .carousel-item {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.dodatkiCointainer{
+  top: 30vh !important;
+}
+
+.dodatki{
+  min-height: 100vh;
+}
+
+.operationalCarbon{
+background-image: url(https://images.unsplash.com/photo-1572202808998-93788f6d39da?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80);
+background-size: 120%;
+background-position: -5vh;
+}
+.embodiedCarbon{
+  background-image: url(https://images.unsplash.com/photo-1517757814062-2a2c761218f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80);
+}
+.homeMobile{
+  /* margin-top: 30vh; */
+  min-height: 105vh;
+  /* background-image: url(https://images.unsplash.com/photo-1517757814062-2a2c761218f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=635&q=80); */
+  background-size: 120vh;
+  background-color: black;
+}
+.homeMobileCard{
+  margin-top: 73vh;
+  min-width: 100vw;
+  margin-left: -5vw;
+  position: absolute !important;
+  z-index: 2;
+  /* width: 105vw; */
+  background-color: rgba(0, 0, 0, 0.1);
+}
+/* .slider{
+  height: 110vh !important;
+} */
+.zamowMobile{
+  margin-top: 1vh;
+  right: 0;
+  position: relative !important;
+  z-index: 2;
+  background-color: rgba(224, 64, 0, 0.3);
+  max-height: 4vh;
+  min-width: 30vw;
+}
+
+.Example {
+
+
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0;
+    padding: 10px;
+
+}
+.Example .canvas {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.ukladPrzestrzenny{
+  min-height: 100vw;
+}
+
+.pickHouse{
+  min-height: 45vh;
+    background-color: rgb(0, 0, 0, 0);
+    margin-right: 2vw;
+    margin-top: 5vh;
+}
+.pickHouse .hover{
+  color: orange;
+  background-color: rgba(236, 95, 0, 1);
+  
+}
+
+.sliderDachplaski{
+  max-height: 850px !important;
+}
+
+.ekologiaCard{
+  min-height: 80vh;
+  border-radius: 10px;
+}
+
+#Dropdown_991{
+  z-index: 3;
+}
+
+/* .homeSVG{
+  min-height: 1200px;
+} */
+
+.footer{
+  margin-top: 1500vh;
+}
+
+.modalHome{
+  background-color: rgba(0, 0, 0, 0.0);
+  min-height: 20vw;
+  outline-width: 0px;
+  outline-color: rgba(0, 0, 0, 0.0);
+}
+@media only screen 
+and  (max-width: 1366px) {
+  .modalHome {min-height: 270px;}
+}
+.modalHome :hover {
+  background-color: rgb(255, 255, 255);
+ 
+} 
+
+.btn {
+  background-color: rgb(255, 255, 255);
+  
+} 
+
+
+.house1card{
+  background-color: rgb(65, 65, 65);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  margin-top: 1vh;
+}
+
+
+.house2card{
+  background-color:white;
+  color: rgb(44, 44, 44);
+  border-radius: 20px;
+  border: none;
+  margin-top: 5vh;
+
+}
+
+
+.house3card{
+  background-color: rgb(211, 115, 36);
+  color: white;
+  border-radius: 20px;
+  border: none;
+  margin-top: 5vh;
+}
